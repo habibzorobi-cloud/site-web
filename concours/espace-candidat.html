@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espace Candidat - Plateforme des Concours - Ministère de la Défense</title>
+  <meta name="description" content="Connexion et inscription à l'Espace Candidat de la plateforme des concours du Ministère de la Défense de Côte d'Ivoire.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/concours.css">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container">
+      <span class="republic">République de Côte d'Ivoire — Union · Discipline · Travail</span>
+      <div class="top-links">
+        <a href="../contact.html">Nous contacter</a>
+        <a href="../index.html">Site du Ministère</a>
+      </div>
+    </div>
+  </div>
+  <div class="flag-strip"><span class="orange"></span><span class="white"></span><span class="green"></span></div>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <img src="../images/logo-ministere-defense.png" alt="Emblème du Ministère de la Défense de Côte d'Ivoire" class="brand-emblem">
+        <div class="brand-text">
+          <div class="name-fr">Ministère de la Défense</div>
+          <div class="name-sub">République de Côte d'Ivoire</div>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../ministre.html">Le Ministre</a></li>
+          <li><a href="../forces-armees.html">Forces Armées</a></li>
+          <li><a href="../actualites.html">Actualités</a></li>
+          <li><a href="index.html" class="active">Concours</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <div class="platform-band">
+    <div class="container">
+      <span class="platform-name">📋 Plateforme des Concours du Ministère de la Défense</span>
+      <nav style="display:flex; align-items:center; gap:20px;">
+        <a href="index.html">Accueil</a>
+        <a href="concours-disponibles.html">Concours disponibles</a>
+        <a href="espace-candidat.html">Espace Candidat</a>
+        <span class="session-tag">SESSION 2026</span>
+      </nav>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <div class="container">
+      <span class="eyebrow">Mon compte</span>
+      <h1>Espace Candidat</h1>
+      <div class="breadcrumb"><a href="index.html">Accueil concours</a> / Espace Candidat</div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="candidate-panels">
+        <div class="candidate-panel">
+          <span class="panel-status">🆕 Nouveau candidat</span>
+          <div class="icon-box">📝</div>
+          <h3>Créer un compte candidat</h3>
+          <p>Cet espace est réservé aux candidats non encore enregistrés sur la plateforme. Il vous permet de :</p>
+          <ul>
+            <li>Définir votre profil candidat</li>
+            <li>Créer un compte sécurisé</li>
+            <li>Vous inscrire aux concours de votre choix</li>
+            <li>Effectuer un paiement en ligne</li>
+            <li>Prendre rendez-vous pour vos démarches</li>
+          </ul>
+          <span class="status-badge closed" style="margin-bottom:12px;">Inscriptions closes pour la session 2026</span>
+          <a href="#auth" class="btn btn-outline" style="border-color:var(--color-border); color:var(--color-text);">Être alerté(e) de la prochaine session</a>
+        </div>
+
+        <div class="candidate-panel highlight">
+          <span class="panel-status">✔️ Déjà inscrit(e)</span>
+          <div class="icon-box">🔑</div>
+          <h3>Accéder à mon compte</h3>
+          <p>Cet espace est réservé aux candidats déjà enregistrés sur la plateforme. Il vous permet de :</p>
+          <ul>
+            <li>Poursuivre une inscription en cours</li>
+            <li>Prendre ou consulter un rendez-vous</li>
+            <li>Imprimer vos fiches et reçus</li>
+            <li>Consulter vos différents résultats</li>
+            <li>Accéder au forum de discussion</li>
+          </ul>
+          <a href="#auth" class="btn btn-primary">Me connecter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt" id="auth">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Connexion sécurisée</span>
+        <h2>Accédez à votre espace</h2>
+      </div>
+      <div class="form-box" style="max-width:520px; margin:0 auto;">
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="tab-login">Connexion</button>
+          <button class="auth-tab" data-tab="tab-register">Créer un compte</button>
+        </div>
+
+        <div id="tab-login" class="auth-panel active">
+          <form novalidate>
+            <div class="form-group">
+              <label for="login-id">Numéro de candidat ou email</label>
+              <input type="text" id="login-id" name="login-id" placeholder="Ex : MD26-00001 ou email">
+            </div>
+            <div class="form-group">
+              <label for="login-pass">Mot de passe</label>
+              <input type="password" id="login-pass" name="login-pass" placeholder="••••••••">
+            </div>
+            <button type="submit" class="btn btn-green" style="width:100%;">Se connecter</button>
+            <p class="form-note text-center mt-24"><a href="#" style="color:var(--color-green); font-weight:700;">Mot de passe oublié ?</a></p>
+          </form>
+        </div>
+
+        <div id="tab-register" class="auth-panel">
+          <div class="requirements-box" style="margin-top:0;">
+            <h3 style="margin-bottom:10px; font-size:1rem;">Inscriptions closes</h3>
+            <p style="font-size:0.9rem; color:var(--color-text-light);">Les inscriptions pour la session 2026 sont terminées. Laissez votre email pour être averti(e) dès l'ouverture de la prochaine session.</p>
+          </div>
+          <form novalidate class="mt-24">
+            <div class="form-group">
+              <label for="notify-email">Adresse email</label>
+              <input type="email" id="notify-email" name="notify-email" placeholder="vous@exemple.com">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">M'alerter à la prochaine session</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Questions fréquentes</span>
+        <h2>Foire aux questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-question">
+            <span>Comment consulter le résultat de mon concours ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">Connectez-vous à votre Espace Candidat avec votre numéro d'inscription (ex : MD26-00001) puis rendez-vous dans la rubrique « Mes résultats ». Vous pourrez également imprimer votre convocation ou votre fiche de rendez-vous directement depuis cette page.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Quels moyens de paiement sont acceptés pour les frais d'inscription ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">Les paiements se font exclusivement en ligne depuis l'Espace Candidat, via Orange Money, MTN Mobile Money ou Wave. Aucun paiement en espèces ou par virement bancaire n'est accepté.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Je n'ai pas satisfait à la visite médicale, que faire ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">Pour les concours EMPT, AFA et ENSOA, présentez-vous au bureau du Sous-Directeur technique et clinique de l'Hôpital Militaire d'Abidjan (HMA). Pour le concours ESO Gendarmerie, contactez le service ORL du Centre de Santé Principal (CSP) d'Agban.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Quels documents dois-je préparer avant de m'inscrire ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">Une pièce d'identité valide, une copie intégrale de votre acte de naissance, un justificatif d'enrôlement à la Couverture Maladie Universelle (CMU) et un compte Mobile Money ou Wave approvisionné.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Comment contacter l'assistance en cas de problème technique ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">L'assistance technique est joignable au 27 22 50 94 24 pour tout problème de connexion, de paiement ou de téléchargement de documents. L'assistance administrative répond au 05 00 83 00 00 ou 05 00 77 00 00 pour les questions liées aux dossiers de candidature.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-header">
+            <img src="../images/logo-ministere-defense.png" alt="Emblème du Ministère de la Défense de Côte d'Ivoire" class="footer-emblem">
+            <div class="brand-text">
+              <div class="name-fr" style="color:#fff;">Ministère de la Défense</div>
+              <div class="name-sub">République de Côte d'Ivoire</div>
+            </div>
+          </div>
+          <p>Plateforme officielle des concours du Ministère de la Défense de la République de Côte d'Ivoire.</p>
+        </div>
+        <div>
+          <h4>Plateforme</h4>
+          <ul>
+            <li><a href="index.html">Accueil concours</a></li>
+            <li><a href="concours-disponibles.html">Concours disponibles</a></li>
+            <li><a href="espace-candidat.html">Espace Candidat</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Ministère</h4>
+          <ul>
+            <li><a href="../index.html">Site officiel</a></li>
+            <li><a href="../ministre.html">Le Ministre</a></li>
+            <li><a href="../forces-armees.html">Forces Armées</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Assistance</h4>
+          <ul>
+            <li>Administratif : 05 00 83 00 00</li>
+            <li>Technique : 27 22 50 94 24</li>
+            <li><a href="../contact.html">Nous écrire</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Ministère de la Défense — République de Côte d'Ivoire. Tous droits réservés.</span>
+        <span>Union · Discipline · Travail</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/concours.js"></script>
+</body>
+</html>

@@ -1,0 +1,724 @@
+/* ============================================
+   Plateforme des Concours - Ministère de la Défense
+   Feuille de style complémentaire (réutilise les
+   variables et composants définis dans style.css)
+   ============================================ */
+
+/* ---------- Sous-bandeau plateforme ---------- */
+.platform-band {
+  background: var(--color-navy);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 10px 0;
+  font-size: 0.85rem;
+}
+
+.platform-band .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.platform-band .platform-name {
+  font-weight: 700;
+}
+
+.platform-band .session-tag {
+  background: var(--color-orange);
+  color: var(--color-white);
+  padding: 2px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Hero recherche ---------- */
+.hero-search {
+  background: linear-gradient(120deg, var(--color-dark) 0%, var(--color-navy) 55%, var(--color-green-dark) 100%);
+  color: var(--color-white);
+  padding: 64px 0 56px;
+  text-align: center;
+}
+
+.hero-search h1 {
+  color: var(--color-white);
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  margin-bottom: 14px;
+}
+
+.hero-search p {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 620px;
+  margin: 0 auto 32px;
+}
+
+.search-box {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  background: var(--color-white);
+  border-radius: 999px;
+  padding: 6px;
+  box-shadow: var(--shadow-md);
+  gap: 6px;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  border-radius: 999px;
+  font-family: inherit;
+}
+
+.search-box button {
+  border: none;
+  background: var(--color-orange);
+  color: var(--color-white);
+  font-weight: 700;
+  padding: 12px 26px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-box button:hover {
+  background: var(--color-orange-dark);
+}
+
+.hero-search-actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ---------- Bandeau statistiques rapides ---------- */
+.quick-stats {
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.quick-stats .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.quick-stat {
+  text-align: center;
+  border-right: 1px solid var(--color-border);
+}
+
+.quick-stat:last-child {
+  border-right: none;
+}
+
+.quick-stat .stat-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-green);
+}
+
+.quick-stat .stat-label {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  margin-top: 4px;
+}
+
+/* ---------- Alertes / Annonces ---------- */
+.alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.alert-card {
+  border: 1px solid var(--color-border);
+  border-left: 5px solid var(--color-green);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.alert-card.urgent {
+  border-left-color: var(--color-orange);
+  background: #FFF8F0;
+}
+
+.alert-card.info {
+  border-left-color: var(--color-green);
+}
+
+.alert-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.alert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.alert-badge.resultat {
+  background: #FFEBD6;
+  color: var(--color-orange-dark);
+}
+
+.alert-badge.communique {
+  background: #E4F5FF;
+  color: #1568A8;
+}
+
+.alert-badge.info-badge {
+  background: #E7F6EC;
+  color: var(--color-green-dark);
+}
+
+.alert-date {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+}
+
+.alert-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.alert-card p {
+  color: var(--color-text-light);
+  font-size: 0.92rem;
+  margin-bottom: 8px;
+}
+
+.alert-card ul {
+  margin: 10px 0;
+  padding-left: 0;
+}
+
+.alert-card ul li {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  padding: 4px 0 4px 22px;
+  position: relative;
+}
+
+.alert-card ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--color-orange);
+  font-weight: 800;
+}
+
+.alert-card .alert-toggle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-green);
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.alert-card .alert-details {
+  display: none;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--color-border);
+}
+
+.alert-card .alert-details.open {
+  display: block;
+}
+
+/* ---------- Filtres concours ---------- */
+.concours-toolbar {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  background: var(--color-bg-alt);
+  padding: 18px 22px;
+  border-radius: var(--radius);
+}
+
+.concours-search {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+}
+
+.concours-search input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.concours-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip-filter {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.chip-filter:hover {
+  border-color: var(--color-green);
+}
+
+.chip-filter.active {
+  background: var(--color-green);
+  border-color: var(--color-green);
+  color: var(--color-white);
+}
+
+/* ---------- Groupes de concours ---------- */
+.corps-group {
+  margin-bottom: 44px;
+}
+
+.corps-group-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.corps-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--color-dark);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.corps-group-header h3 {
+  font-size: 1.15rem;
+}
+
+.corps-group-header .corps-count {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+}
+
+.concours-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.concours-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  flex-wrap: wrap;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.concours-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.concours-card-main h4 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: var(--color-dark);
+}
+
+.concours-card-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.concours-card-meta strong {
+  color: var(--color-text);
+}
+
+.concours-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.status-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 5px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.status-badge.open {
+  background: #E7F6EC;
+  color: var(--color-green-dark);
+}
+
+.status-badge.closed {
+  background: #F0F0F0;
+  color: var(--color-text-light);
+}
+
+.status-badge.closing-soon {
+  background: #FFEBD6;
+  color: var(--color-orange-dark);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius);
+  border: 1px dashed var(--color-border);
+}
+
+/* ---------- Espace candidat ---------- */
+.candidate-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.candidate-panel {
+  border-radius: var(--radius);
+  padding: 32px;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.candidate-panel.highlight {
+  background: linear-gradient(160deg, var(--color-dark), var(--color-navy));
+  color: var(--color-white);
+  border: none;
+}
+
+.candidate-panel.highlight h3,
+.candidate-panel.highlight .panel-status {
+  color: var(--color-white);
+}
+
+.candidate-panel .icon-box {
+  background: rgba(255,255,255,0.08);
+}
+
+.candidate-panel.highlight .icon-box {
+  border-color: rgba(255,255,255,0.2);
+}
+
+.candidate-panel:not(.highlight) p {
+  color: var(--color-text-light);
+}
+
+.candidate-panel.highlight p {
+  color: rgba(255,255,255,0.8);
+}
+
+.panel-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.1);
+  margin-bottom: 18px;
+  align-self: flex-start;
+}
+
+.candidate-panel:not(.highlight) .panel-status {
+  background: #E7F6EC;
+  color: var(--color-green-dark);
+}
+
+.candidate-panel ul {
+  margin: 18px 0 24px;
+  flex: 1;
+}
+
+.candidate-panel ul li {
+  padding: 6px 0 6px 24px;
+  position: relative;
+  font-size: 0.92rem;
+}
+
+.candidate-panel ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  font-weight: 800;
+  color: var(--color-orange);
+}
+
+.candidate-panel.highlight ul li::before {
+  color: var(--color-orange);
+}
+
+/* ---------- Prérequis / checklist card ---------- */
+.prereq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.prereq-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+.prereq-item .icon-box {
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.prereq-item h4 {
+  font-size: 0.92rem;
+  margin-bottom: 4px;
+}
+
+.prereq-item p {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+/* ---------- Assistance ---------- */
+.assist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.assist-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.assist-card h4 {
+  font-size: 0.98rem;
+  margin-bottom: 8px;
+}
+
+.assist-card a {
+  display: block;
+  font-weight: 700;
+  color: var(--color-green);
+  font-size: 0.95rem;
+  margin-top: 2px;
+}
+
+.assist-card a:hover {
+  color: var(--color-green-dark);
+}
+
+/* ---------- FAQ Accordion ---------- */
+.faq-list {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 20px 4px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: inherit;
+}
+
+.faq-question .faq-icon {
+  color: var(--color-green);
+  font-size: 1.2rem;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 4px 20px;
+  color: var(--color-text-light);
+  font-size: 0.92rem;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+/* ---------- Auth tabs (mockup connexion/inscription) ---------- */
+.auth-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--color-border);
+  margin-bottom: 26px;
+}
+
+.auth-tab {
+  flex: 1;
+  text-align: center;
+  padding: 14px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--color-text-light);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-family: inherit;
+}
+
+.auth-tab.active {
+  color: var(--color-green);
+  border-bottom-color: var(--color-green);
+}
+
+.auth-panel {
+  display: none;
+}
+
+.auth-panel.active {
+  display: block;
+}
+
+/* ---------- Trust badge ---------- */
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #E7F6EC;
+  color: var(--color-green-dark);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .quick-stats .container {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+  }
+  .quick-stat:nth-child(2) {
+    border-right: none;
+  }
+  .candidate-panels {
+    grid-template-columns: 1fr;
+  }
+  .prereq-grid {
+    grid-template-columns: 1fr;
+  }
+  .assist-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .search-box {
+    flex-direction: column;
+    border-radius: var(--radius);
+  }
+  .search-box button {
+    border-radius: var(--radius);
+  }
+  .quick-stats .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .concours-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .concours-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .concours-card-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
