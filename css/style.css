@@ -975,6 +975,25 @@ section {
 }
 
 @media (max-width: 720px) {
+  .brand {
+    gap: 10px;
+    min-width: 0;
+  }
+  .brand-emblem {
+    width: 40px;
+    height: 40px;
+  }
+  .brand-text {
+    min-width: 0;
+  }
+  .brand-text .name-fr {
+    font-size: 0.92rem;
+  }
+  .brand-text .name-sub {
+    font-size: 0.64rem;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+  }
   .main-nav {
     position: fixed;
     top: 0;
