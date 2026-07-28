@@ -333,6 +333,13 @@
   justify-content: center;
   font-size: 1.3rem;
   flex-shrink: 0;
+  overflow: hidden;
+}
+
+.corps-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .corps-group-header h3 {
