@@ -173,15 +173,22 @@ section {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-green), var(--color-green-dark));
-  color: var(--color-white);
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.footer-emblem {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.footer-brand-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 1.2rem;
-  flex-shrink: 0;
-  border: 3px solid var(--color-orange);
+  gap: 14px;
+  margin-bottom: 4px;
 }
 
 .brand-text .name-fr {
