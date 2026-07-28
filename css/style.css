@@ -47,6 +47,11 @@ img {
   display: block;
 }
 
+svg {
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -229,11 +234,25 @@ section {
 
 .nav-toggle {
   display: none;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: none;
-  font-size: 1.6rem;
   cursor: pointer;
   color: var(--color-dark);
+  padding: 4px;
+}
+
+.nav-toggle .icon-close {
+  display: none;
+}
+
+.nav-toggle.open .icon-menu {
+  display: none;
+}
+
+.nav-toggle.open .icon-close {
+  display: block;
 }
 
 /* ---------- Hero ---------- */
@@ -460,8 +479,14 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  color: var(--color-green);
   margin-bottom: 18px;
+  flex-shrink: 0;
+}
+
+.icon-box svg {
+  width: 26px;
+  height: 26px;
 }
 
 /* ---------- Breadcrumb / page header ---------- */
@@ -971,7 +996,7 @@ section {
     align-items: stretch;
   }
   .nav-toggle {
-    display: block;
+    display: inline-flex;
   }
   .top-bar .top-links {
     display: none;

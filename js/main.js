@@ -15,14 +15,15 @@ function initNavToggle() {
 
   toggle.addEventListener('click', function () {
     var isOpen = nav.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
     toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    toggle.textContent = isOpen ? '✕' : '☰';
   });
 
   nav.querySelectorAll('a').forEach(function (link) {
     link.addEventListener('click', function () {
       nav.classList.remove('open');
-      toggle.textContent = '☰';
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
     });
   });
 }
